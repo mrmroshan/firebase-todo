@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import {Button,FormControl,InputLabel,Input} from '@material-ui/core';
 import './App.css';
+import Todo from './Todo';
 
 function App() {
   const [todos,setTodos] = useState(['First todo','Second todo']);
@@ -28,7 +29,7 @@ function App() {
       <ul>
         {
           todos.map((todo,i) => (
-            <li key={i}>{todo}</li>
+           <Todo key={i} todo={todo}/>
           ))
         }
       </ul>
